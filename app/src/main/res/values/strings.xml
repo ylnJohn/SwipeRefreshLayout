@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">自定义刷新</string>
+    <string name="refresh_just_now">刚刚刷新</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="refresh_failtrue">刷新失败</string>
+    <string name="refresh_ing">刷新中</string>
+</resources>
