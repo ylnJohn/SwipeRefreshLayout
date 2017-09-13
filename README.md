@@ -8,6 +8,7 @@
 回调方法很多 比如：onRefresh() onPullDistance(int distance)和onPullEnable(boolean enable)开发人员可以根据下拉过程中distance的值做一系列动画。</br>
 
 1、布局中与CoordinatorLayout嵌套使用</br>
+```Java
 <com.yln.swiperefreshlayout.SuperSwipeRefreshLayout
     android:id="@+id/swipe_refresh_layout"
     android:layout_width="match_parent"
@@ -52,9 +53,10 @@
                 </android.support.v7.widget.Toolbar>
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
-        
+```        
         
 2、与AppBarLayout联动使用</br>
+```Java
 mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -68,7 +70,7 @@ mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListene
                 }
             }
         });
-        mRefreshLayout.setOnPullRefreshListener(new SuperSwipeRefreshLayout.OnPullRefreshListener(){
+ mRefreshLayout.setOnPullRefreshListener(new SuperSwipeRefreshLayout.OnPullRefreshListener(){
 
             @Override
             public void onRefresh() {
@@ -99,10 +101,12 @@ mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListene
                 Log.i(TAG,"pull finish");
             }
         });
-        
+```
  3、SuperSwipeRefreshLayout刷新样式支持图标或者其他图形，可以自己通过修改代码在canvas绘制，提供多种方法自定义。代码实现的刷新样式是图标跟随手势下拉扩大和旋转，并提供刷新文案提示，达到刷新触发条件时，图标会不断旋转，直至刷新结束。</br>
+ ```Java
     defaultProgressView = new CircleProgressView(getContext());//刷新图标</br>
 		mHeaderText = new TextView(getContext());//刷新提示文字</br>
 		mHeaderText.setTextColor(0xffffffff);</br>
 		mHeaderText.setTextSize(TypedValue.COMPLEX_UNIT_DIP,12);</br>
 		mHeaderText.setGravity(Gravity.CENTER);</br>
+```
