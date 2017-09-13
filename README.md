@@ -1,13 +1,13 @@
 # SwipeRefreshLayout
-自定义刷新控件（用法和SwipeRefreshLayout类似）
-支持下拉刷新和上拉加载更多
-非侵入式，对原来的ListView、RecyclerView没有任何影响,用法和SwipeRefreshLayout类似。
-支持RecyclerView，ListView，ScrollView，GridView等等。
-被包含的View(RecyclerView,ListView etc.)可跟随手指的滑动而滑动
-默认是跟随手指的滑动而滑动，也可以设置为不跟随：setTargetScrollWithLayout(false)
-回调方法很多 比如：onRefresh() onPullDistance(int distance)和onPullEnable(boolean enable)开发人员可以根据下拉过程中distance的值做一系列动画。
+自定义刷新控件（用法和SwipeRefreshLayout类似）</br>
+支持下拉刷新和上拉加载更多</br>
+非侵入式，对原来的ListView、RecyclerView没有任何影响,用法和SwipeRefreshLayout类似。</br>
+支持RecyclerView，ListView，ScrollView，GridView等等。</br>
+被包含的View(RecyclerView,ListView etc.)可跟随手指的滑动而滑动</br>
+默认是跟随手指的滑动而滑动，也可以设置为不跟随：setTargetScrollWithLayout(false)</br>
+回调方法很多 比如：onRefresh() onPullDistance(int distance)和onPullEnable(boolean enable)开发人员可以根据下拉过程中distance的值做一系列动画。</br>
 
-1、布局中与CoordinatorLayout嵌套使用
+1、布局中与CoordinatorLayout嵌套使用</br>
 <com.yln.swiperefreshlayout.SuperSwipeRefreshLayout
     android:id="@+id/swipe_refresh_layout"
     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
         </android.support.design.widget.AppBarLayout>
         
         
-2、与AppBarLayout联动使用
+2、与AppBarLayout联动使用</br>
 mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -100,9 +100,9 @@ mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListene
             }
         });
         
- 3、SuperSwipeRefreshLayout刷新样式支持图标或者其他图形，可以自己通过修改代码在canvas绘制，提供多种方法自定义。代码实现的刷新样式是图标跟随手势下拉扩大和旋转，并提供刷新文案提示，达到刷新触发条件时，图标会不断旋转，直至刷新结束。
-    defaultProgressView = new CircleProgressView(getContext());//刷新图标
-		mHeaderText = new TextView(getContext());//刷新提示文字
-		mHeaderText.setTextColor(0xffffffff);
-		mHeaderText.setTextSize(TypedValue.COMPLEX_UNIT_DIP,12);
-		mHeaderText.setGravity(Gravity.CENTER);
+ 3、SuperSwipeRefreshLayout刷新样式支持图标或者其他图形，可以自己通过修改代码在canvas绘制，提供多种方法自定义。代码实现的刷新样式是图标跟随手势下拉扩大和旋转，并提供刷新文案提示，达到刷新触发条件时，图标会不断旋转，直至刷新结束。</br>
+    defaultProgressView = new CircleProgressView(getContext());//刷新图标</br>
+		mHeaderText = new TextView(getContext());//刷新提示文字</br>
+		mHeaderText.setTextColor(0xffffffff);</br>
+		mHeaderText.setTextSize(TypedValue.COMPLEX_UNIT_DIP,12);</br>
+		mHeaderText.setGravity(Gravity.CENTER);</br>
